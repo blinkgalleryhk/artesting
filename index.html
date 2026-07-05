@@ -1,20 +1,133 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Face Effects</title><meta itemprop="name" content="Face Effects"><meta name="twitter:title" content="Face Effects"><meta property="og:title" content="Face Effects"><meta property="og:site_name" content="Face Effects"><meta name="description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><meta itemprop="description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><meta property="og:description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><meta name="twitter:description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="face" pass-app-key="https://blinkgalleryhk.github.io/artesting/"></script><script>
-  window.addEventListener('DOMContentLoaded', function () {
-    const loadBundle = function () {
-      if (document.getElementById('artesting-bundle')) return;
-      const script = document.createElement('script');
-      script.id = 'artesting-bundle';
-      script.src = 'bundle.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    };
-
-    if (window.XR8 && typeof window.XR8.addCameraPipelineModule === 'function') {
-      loadBundle();
-    } else {
-      window.addEventListener('xrloaded', loadBundle, { once: true });
-      window.setTimeout(loadBundle, 5000);
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Face Effects</title><meta itemprop="name" content="Face Effects"><meta name="twitter:title" content="Face Effects"><meta property="og:title" content="Face Effects"><meta property="og:site_name" content="Face Effects"><meta name="description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><meta itemprop="description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><meta property="og:description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><meta name="twitter:description" content="This project demonstrates how to use Face Effects to anchor virtual content to a face."><script src="https://cdn.8thwall.com/web/xr/xr.js"></script><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script>// Wait for 8th Wall Engine to load
+    window.addEventListener('load', function() {
+      console.log('Page loaded, checking 8th Wall Engine...')
+      
+      if (typeof window.XREngine !== 'undefined') {
+        console.log('8th Wall Engine loaded successfully')
+        updateStatus('8th Wall Engine ready')
+      } else {
+        console.error('8th Wall Engine not loaded')
+        updateStatus('Error: 8th Wall Engine failed to load')
+        showError('Failed to load 8th Wall Engine. Please check your internet connection and try again.')
+      }
+    })
+    
+    // Helper functions
+    function updateStatus(text) {
+      const statusEl = document.getElementById('loading-status')
+      if (statusEl) {
+        statusEl.textContent = text
+        console.log('Status:', text)
+      }
     }
-  });
-</script><meta property="og:image" content="https://8thwall.org/studio-face-effects-example/assets/preview.png"></head><body></body></html>
-
+    
+    function showError(message) {
+      const errorEl = document.getElementById('camera-error')
+      if (errorEl) {
+        errorEl.innerHTML = `
+          <div style="padding: 40px; text-align: center;">
+            <h2 style="color: #ff6b6b; margin-bottom: 20px;">Error</h2>
+            <p style="margin-bottom: 20px; font-size: 18px;">${message}</p>
+            <div style="text-align: left; max-width: 400px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+              <div style="margin-bottom: 10px;">To fix this:</div>
+              <div>1. Check internet connection</div>
+              <div>2. Refresh the page</div>
+              <div>3. Try a different browser (Chrome recommended)</div>
+              <div>4. Ensure you're using HTTPS (required)</div>
+            </div>
+          </div>
+        `
+        errorEl.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.9);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          font-family: Arial, sans-serif;
+        `
+      }
+    }</script><link rel="preconnect" href="https://cdn.8thwall.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><meta property="og:image" content="https://8thwall.org/studio-face-effects-example/assets/preview.png"><style>body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    
+    #camera-error {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: white;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    #camera-error h2 {
+      color: #ff6b6b;
+      margin-bottom: 20px;
+    }
+    
+    #camera-error p {
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+    
+    #camera-error ul {
+      text-align: left;
+      opacity: 0.7;
+      margin-top: 20px;
+    }</style></head><body><div id="simple-loading" style="position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    text-align: center;"><div style="font-size: 24px; margin-bottom: 20px;">🎭 AR Face Effects</div><div id="loading-status" style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">Initializing camera...</div><div id="loading-details" style="font-size: 14px; opacity: 0.7; max-width: 400px; line-height: 1.5;"><div>1. Checking camera permissions...</div><div>2. Loading 8th Wall Engine...</div><div>3. Initializing AR experience...</div></div><div style="margin-top: 40px; font-size: 12px; opacity: 0.5;">If stuck here, check browser console (F12) for errors</div></div><div id="camera-error"></div><script src="bundle.js"></script><script>// Update loading status
+    function updateStatus(text) {
+      const statusEl = document.getElementById('loading-status')
+      if (statusEl) statusEl.textContent = text
+    }
+    
+    function updateDetails(text) {
+      const detailsEl = document.getElementById('loading-details')
+      if (detailsEl) detailsEl.innerHTML = text
+    }
+    
+    // Initial status updates
+    setTimeout(() => updateStatus('Loading 8th Wall runtime...'), 500)
+    setTimeout(() => updateStatus('Checking camera support...'), 1500)
+    setTimeout(() => updateStatus('Initializing AR engine...'), 2500)
+    
+    // Hide loading after timeout (fallback)
+    setTimeout(() => {
+      const loadingEl = document.getElementById('simple-loading')
+      if (loadingEl && loadingEl.style.display !== 'none') {
+        console.warn('Fallback: Hiding loading screen after 15 seconds')
+        loadingEl.style.opacity = '0'
+        loadingEl.style.transition = 'opacity 1s'
+        setTimeout(() => {
+          loadingEl.style.display = 'none'
+        }, 1000)
+      }
+    }, 15000)</script></body></html>
