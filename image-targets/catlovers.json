@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 358,
+    "left": 0,
+    "width": 1180,
+    "height": 1573,
+    "isRotated": true,
+    "originalWidth": 1180,
+    "originalHeight": 2290
+  },
+  "imagePath": "image-targets/catlovers_luminance.png",
+  "metadata": null,
+  "name": "catlovers",
+  "resources": {
+    "originalImage": "catlovers_original.png",
+    "croppedImage": "catlovers_cropped.png",
+    "thumbnailImage": "catlovers_thumbnail.png",
+    "luminanceImage": "catlovers_luminance.png"
+  },
+  "created": 1783741633669,
+  "updated": 1783741633669
+}
