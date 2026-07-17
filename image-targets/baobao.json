@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 142,
+    "width": 933,
+    "height": 1244,
+    "isRotated": false,
+    "originalWidth": 1217,
+    "originalHeight": 1244
+  },
+  "imagePath": "image-targets/baobao_luminance.png",
+  "metadata": null,
+  "name": "baobao",
+  "resources": {
+    "originalImage": "baobao_original.png",
+    "croppedImage": "baobao_cropped.png",
+    "thumbnailImage": "baobao_thumbnail.png",
+    "luminanceImage": "baobao_luminance.png"
+  },
+  "created": 1784263354903,
+  "updated": 1784263354903
+}
