@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 139,
+    "width": 864,
+    "height": 1152,
+    "isRotated": false,
+    "originalWidth": 1142,
+    "originalHeight": 1152
+  },
+  "imagePath": "image-targets/luckycat3_luminance.png",
+  "metadata": null,
+  "name": "luckycat3",
+  "resources": {
+    "originalImage": "luckycat3_original.png",
+    "croppedImage": "luckycat3_cropped.png",
+    "thumbnailImage": "luckycat3_thumbnail.png",
+    "luminanceImage": "luckycat3_luminance.png"
+  },
+  "created": 1784800663251,
+  "updated": 1784800663251
+}

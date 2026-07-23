@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 116,
+    "width": 1022,
+    "height": 1363,
+    "isRotated": false,
+    "originalWidth": 1256,
+    "originalHeight": 1363
+  },
+  "imagePath": "image-targets/yellowdragon_luminance.png",
+  "metadata": null,
+  "name": "yellowdragon",
+  "resources": {
+    "originalImage": "yellowdragon_original.png",
+    "croppedImage": "yellowdragon_cropped.png",
+    "thumbnailImage": "yellowdragon_thumbnail.png",
+    "luminanceImage": "yellowdragon_luminance.png"
+  },
+  "created": 1784798659733,
+  "updated": 1784798659733
+}

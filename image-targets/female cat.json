@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 93,
+    "width": 619,
+    "height": 826,
+    "isRotated": false,
+    "originalWidth": 806,
+    "originalHeight": 826
+  },
+  "imagePath": "image-targets/female cat_luminance.png",
+  "metadata": null,
+  "name": "female cat",
+  "resources": {
+    "originalImage": "female cat_original.png",
+    "croppedImage": "female cat_cropped.png",
+    "thumbnailImage": "female cat_thumbnail.png",
+    "luminanceImage": "female cat_luminance.png"
+  },
+  "created": 1784801756835,
+  "updated": 1784801756835
+}
