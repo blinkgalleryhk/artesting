@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 71,
+    "width": 1046,
+    "height": 1395,
+    "isRotated": true,
+    "originalWidth": 1189,
+    "originalHeight": 1395
+  },
+  "imagePath": "image-targets/dancing lion cat_luminance.png",
+  "metadata": null,
+  "name": "dancing lion cat",
+  "resources": {
+    "originalImage": "dancing lion cat_original.png",
+    "croppedImage": "dancing lion cat_cropped.png",
+    "thumbnailImage": "dancing lion cat_thumbnail.png",
+    "luminanceImage": "dancing lion cat_luminance.png"
+  },
+  "created": 1784775759571,
+  "updated": 1784775759571
+}

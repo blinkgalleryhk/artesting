@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 208,
+    "left": 0,
+    "width": 821,
+    "height": 1094,
+    "isRotated": true,
+    "originalWidth": 821,
+    "originalHeight": 1512
+  },
+  "imagePath": "image-targets/koi family_luminance.png",
+  "metadata": null,
+  "name": "koi family",
+  "resources": {
+    "originalImage": "koi family_original.png",
+    "croppedImage": "koi family_cropped.png",
+    "thumbnailImage": "koi family_thumbnail.png",
+    "luminanceImage": "koi family_luminance.png"
+  },
+  "created": 1784775322029,
+  "updated": 1784775322029
+}

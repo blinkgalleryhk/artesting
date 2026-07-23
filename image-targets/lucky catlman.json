@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 57,
+    "width": 861,
+    "height": 1148,
+    "isRotated": false,
+    "originalWidth": 975,
+    "originalHeight": 1148
+  },
+  "imagePath": "image-targets/lucky catlman_luminance.png",
+  "metadata": null,
+  "name": "lucky catlman",
+  "resources": {
+    "originalImage": "lucky catlman_original.png",
+    "croppedImage": "lucky catlman_cropped.png",
+    "thumbnailImage": "lucky catlman_thumbnail.png",
+    "luminanceImage": "lucky catlman_luminance.png"
+  },
+  "created": 1784777195365,
+  "updated": 1784777195365
+}
