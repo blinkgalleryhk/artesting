@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 315,
+    "left": 0,
+    "width": 1358,
+    "height": 1810,
+    "isRotated": true,
+    "originalWidth": 1358,
+    "originalHeight": 2442
+  },
+  "imagePath": "image-targets/goldcat-1_luminance.png",
+  "metadata": null,
+  "name": "goldcat-1",
+  "resources": {
+    "originalImage": "goldcat-1_original.png",
+    "croppedImage": "goldcat-1_cropped.png",
+    "thumbnailImage": "goldcat-1_thumbnail.png",
+    "luminanceImage": "goldcat-1_luminance.png"
+  },
+  "created": 1785316685424,
+  "updated": 1785316685424
+}

@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 47,
+    "width": 705,
+    "height": 941,
+    "isRotated": false,
+    "originalWidth": 800,
+    "originalHeight": 941
+  },
+  "imagePath": "image-targets/lucky_catlman_1_82_luminance.png",
+  "metadata": null,
+  "name": "lucky_catlman_1_82",
+  "resources": {
+    "originalImage": "lucky_catlman_1_82_original.png",
+    "croppedImage": "lucky_catlman_1_82_cropped.png",
+    "thumbnailImage": "lucky_catlman_1_82_thumbnail.png",
+    "luminanceImage": "lucky_catlman_1_82_luminance.png"
+  },
+  "created": 1785314214860,
+  "updated": 1785314214860
+}
